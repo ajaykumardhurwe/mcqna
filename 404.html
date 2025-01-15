@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reloading...</title>
     <script>
-        // Reload the current page without using an external redirect
-        if (window.location.pathname !== "/") {
-            window.location.href = window.location.origin + window.location.pathname;
+        // Reload the page only if certain conditions are met
+        const currentUrl = window.location.href;
+        const correctUrl = window.location.origin + window.location.pathname;
+
+        // Reload the page only if the current URL doesn't match the correct URL
+        if (currentUrl !== correctUrl) {
+            window.location.href = correctUrl;
         }
     </script>
 </head>
