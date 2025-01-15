@@ -1,0 +1,32 @@
+name: Deploy Vite to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when pushing to the main branch
+  workflow_dispatch:  # Allows you to trigger the deployment manually
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Run the job on the latest Ubuntu
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Checkout the repository's code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2  # Set up Node.js for the build process
+        with:
+          node-version: '16'  # You can specify the Node.js version
+
+      - name: Install Dependencies
+        run: npm install  # Install the project dependencies
+
+      - name: Build the Project
+        run: npm run build  # Run the build command
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4  # GitHub Pages deployment action
+        with:
+          branch: gh-pages  # Deploy to the gh-pages branch
+          folder: dist  # The 'dist' folder generated after the build process
