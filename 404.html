@@ -7,16 +7,21 @@
     <script>
         // On page load, check if there's a saved page URL in sessionStorage
         window.onload = function() {
-            // Check if the 'lastPage' key exists in sessionStorage and it's not the current page
+            // Check if we are on the contact-us page and don't attempt to redirect
+            if (window.location.href === "https://ajaydhurwe.tech/contact-us") {
+                // If we are on the contact-us page, don't perform any redirect.
+                return;
+            }
+
+            // If a saved URL exists and it's not the current page, redirect to it
             if (sessionStorage.getItem('lastPage') && window.location.href !== sessionStorage.getItem('lastPage')) {
-                // If a saved URL exists and it's not the current page, redirect to it
                 window.location.replace(sessionStorage.getItem('lastPage'));
             }
         }
 
-        // Save the current page URL to sessionStorage before the page unloads (e.g., before refresh)
+        // Save the current page URL to sessionStorage before the page unloads
         window.onbeforeunload = function() {
-            // Only save the URL if it's not the redirecting page (prevent infinite loop)
+            // Only save the URL if it's not the contact-us page
             if (window.location.href !== "https://ajaydhurwe.tech/contact-us") {
                 sessionStorage.setItem('lastPage', window.location.href);
             }
@@ -27,22 +32,6 @@
     <p>Redirecting...</p>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
