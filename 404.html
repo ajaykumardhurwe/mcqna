@@ -1,4 +1,42 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Home Page</title>
+    <script>
+        // पेज लोड होते ही हमेशा होम पेज पर रीडायरेक्ट करें
+        window.onload = function () {
+            // होम पेज का URL
+            const homeUrl = 'https://ajaydhurwe.tech/';
+
+            // अगर वर्तमान URL होम पेज नहीं है, तो रीडायरेक्ट करें
+            if (window.location.href !== homeUrl) {
+                window.location.href = homeUrl;
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to home page...</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,59 +70,4 @@
     <p>Reloading the same page...</p>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect to Home Page</title>
-    <script>
-        // पेज लोड होते ही हमेशा होम पेज पर रीडायरेक्ट करें
-        window.onload = function () {
-            // होम पेज का URL
-            const homeUrl = 'https://ajaydhurwe.tech/';
-
-            // अगर वर्तमान URL होम पेज नहीं है, तो रीडायरेक्ट करें
-            if (window.location.href !== homeUrl) {
-                window.location.href = homeUrl;
-            }
-        };
-    </script>
-</head>
-<body>
-    <p>Redirecting to home page...</p>
-</body>
-</html>
-
  -->
-
-
-
-
-
-
-
-
-
-
-
