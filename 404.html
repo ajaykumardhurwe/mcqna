@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay on the Same Page</title>
+    <script>
+        // पेज लोड होते समय पिछले पेज को चेक करना
+        window.onload = function() {
+            const lastPage = sessionStorage.getItem('lastPage');
+            const currentPage = window.location.href;
+
+            // यदि lastPage सहेजा गया है और यह वर्तमान पेज से अलग है, तो रीडायरेक्ट करें
+            if (lastPage && lastPage !== currentPage) {
+                window.location.replace(lastPage);
+            }
+        };
+
+        // पेज बंद होने या रिफ्रेश होने पर URL सहेजना
+        window.onbeforeunload = function() {
+            sessionStorage.setItem('lastPage', window.location.href);
+        };
+    </script>
+</head>
+<body>
+    <p>Welcome back to the same page!</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // On page load, check if there's a saved page URL in sessionStorage
+        window.onload = function() {
+            if (sessionStorage.getItem('lastPage')) {
+                // If a saved URL exists, redirect to it
+                window.location.replace(sessionStorage.getItem('lastPage'));
+            }
+        }
+
+        // Save the current page URL to sessionStorage before the page unloads (e.g., before refresh)
+        window.onbeforeunload = function() {
+            sessionStorage.setItem('lastPage', window.location.href);
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+ -->
