@@ -5,28 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stay on the Same Page</title>
     <script>
-        // पेज लोड होते समय पिछले पेज को चेक करना
-        window.onload = function() {
-            const lastPage = sessionStorage.getItem('lastPage');
-            const currentPage = window.location.href;
+        // पेज लोड होते समय sessionStorage से URL पढ़ें और रीडायरेक्ट करें
+        window.onload = function () {
+            const lastPage = sessionStorage.getItem('lastPage'); // पिछला पेज पढ़ें
+            const currentPage = window.location.href; // वर्तमान पेज की URL
 
-            // यदि lastPage सहेजा गया है और यह वर्तमान पेज से अलग है, तो रीडायरेक्ट करें
             if (lastPage && lastPage !== currentPage) {
+                // अगर lastPage सहेजा गया है और यह वर्तमान पेज से अलग है, तो रीडायरेक्ट करें
                 window.location.replace(lastPage);
             }
         };
 
-        // पेज बंद होने या रिफ्रेश होने पर URL सहेजना
-        window.onbeforeunload = function() {
+        // पेज बंद होने या रिफ्रेश होने पर URL सहेजें
+        window.onbeforeunload = function () {
             sessionStorage.setItem('lastPage', window.location.href);
         };
     </script>
 </head>
 <body>
-    <p>Welcome back to the same page!</p>
+    <p>Loading the same page...</p>
 </body>
 </html>
-
 
 
 
