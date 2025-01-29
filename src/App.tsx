@@ -21,11 +21,14 @@ import {PrivacyPolicy} from './pages/Profile/PrivacyPolicy';
 import {Services} from './pages/Profile/Services'
 import { EFormFillup } from './pages/Jobs/EFormFillup';
 import { JobConsultancy } from './pages/Jobs/JobConsultancy';
+// import VisitorCounter from './lib/VisitorCounter';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gray-50 pb-16">
+          {/* <VisitorCounter></VisitorCounter> */}
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mcq/*" element={<MCQ />} />
