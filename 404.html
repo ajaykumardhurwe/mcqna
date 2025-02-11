@@ -4,26 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
     <script>
-<<<<<<< HEAD
-        // On page load, check if there's a saved page URL in sessionStorage
-        window.onload = function() {
-            if (sessionStorage.getItem('lastPage')) {
-                // If a saved URL exists, redirect to it
-                window.location.replace(sessionStorage.getItem('lastPage'));
-            }
-        }
-
-        // Save the current page URL to sessionStorage before the page unloads (e.g., before refresh)
-        window.onbeforeunload = function() {
-            sessionStorage.setItem('lastPage', window.location.href);
-        }
-=======
-        // Redirect to the root of your app
-        var path = window.location.pathname;
-        var newPath = '/https://ajadhurwe.tech/' + path;
-        window.location.replace(newPath);
->>>>>>> fc182f4 (second version)
+        // Redirect to the root for React Router
+        window.location.href = "/";
     </script>
 </head>
 <body>
