@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaShare, FaShareAltSquare, FaFacebook, FaInstagram } from "react-icons/fa";
 
 
 interface Question {
@@ -405,8 +405,13 @@ export function MCQTest() {
  
 
 {/* Share Buttons */}
+
+
 <div className="mt-6 flex justify-center space-x-4">
   
+<span>Share on </span>
+<FaShare></FaShare>
+
   {/* WhatsApp Share */}
   <a
     href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
@@ -421,7 +426,7 @@ export function MCQTest() {
     className="flex items-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 space-x-2"
   >
     <FaWhatsapp size={20} />
-    <span>Share on WhatsApp</span>
+    {/* <span>Share on Whatsapp</span> */}
   </a>
 
   {/* Facebook Share */}
@@ -440,7 +445,7 @@ export function MCQTest() {
     className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 space-x-2"
   >
     <FaFacebook size={20} />
-    <span>Share on Facebook</span>
+    {/* <span>Share on Facebook</span> */}
   </a>
 
   {/* Instagram Share (Copy to Clipboard) */}

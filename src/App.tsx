@@ -119,6 +119,12 @@ import {Services} from './pages/Profile/Services'
 import { EFormFillup } from './pages/Jobs/EFormFillup';
 import { JobConsultancy } from './pages/Jobs/JobConsultancy';
 import VisitorCounter from './lib/VisitorCounter';
+import Colleges from './pages/A2Class/Colleges';
+import Schools from './pages/A2Class/Schools';
+import SchoolsData from './pages/A2Class/SchoolsData';
+import CollegeDetail from './pages/A2Class/CollegeDetail';
+
+
 
 function App() {
   return (
@@ -152,6 +158,14 @@ function App() {
         <Route path="/eformfillup" element={<EFormFillup />} />
         <Route path="/jobconsultancy" element={<JobConsultancy />} />
        
+        <Route path="/colleges" element={<Colleges />} />
+        {/* <Route path="/schools" element={<Schools />} /> */}
+        <Route path="/schools" element={<SchoolsData />} />
+
+        <Route path="college/:name" element={<CollegeDetail />} />
+        
+
+
         
 
         </Routes>
@@ -162,3 +176,33 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
