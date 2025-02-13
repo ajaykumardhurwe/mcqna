@@ -123,15 +123,25 @@ import Colleges from './pages/A2Class/Colleges';
 import Schools from './pages/A2Class/Schools';
 import SchoolsData from './pages/A2Class/SchoolsData';
 import CollegeDetail from './pages/A2Class/CollegeDetail';
-
+import Notification from './components/layout/Notification';
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gray-50 pb-16">
- <VisitorCounter></VisitorCounter> 
-       
+ {/* <VisitorCounter></VisitorCounter> 
+       <Notification></Notification> */}
+
+
+<div style={{ flexDirection: 'row', alignItems: 'right' }}>
+  <VisitorCounter />
+  <Notification />
+</div>
+
+
+
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mcq/*" element={<MCQ />} />
