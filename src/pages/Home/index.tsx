@@ -1,6 +1,6 @@
-
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
+// import "./styles.css"; // Import CSS for animated background
 
 // // Card data
 // const cards = [
@@ -258,41 +258,42 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./styles.css"; // Import CSS for animated background
 
 // Card data
 const cards = [
+  // {
+  //   id: 1,
+  //   title: "Basic Plan",
+  //   images: [
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-L-jyGWUPDea_qpNgxva7WSFtERia-Hc6eLUN84zCwO8g1a84zezgjnWaPYk_IUDZ04&usqp=CAU",
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI6YoZjXwHHnRXtQegP9GeB0QuoecqA55UUEJev2PDnoGj-ZKjgZAFU-MYMZx6MFlEy8g&usqp=CAU",
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5tqE9266RK8p3cQ-bHtq-6Jl1HAQ_YrNMPSeYvmV2fiuUEoTgx6lR6NrfyoSKu_7rhs&usqp=CAU",
+  //   ],
+  //   description: "A perfect plan for small businesses and startups.",
+  //   facilities: [
+  //     "🌐 Domain & Hosting Free for 1 Year",
+  //     "🔒 Free Valid SSL Certificate",
+  //     "📄 6-10 Pages (Depends on Plan)",
+  //     "💬 WhatsApp Integration",
+  //     "📱 Responsive for Mobile/Tablet",
+  //     "📧 Free Professional Emails",
+  //     "🛠️ Admin Panel",
+  //     "🌟 SEO Friendly",
+  //     "📲 Social Media Integration",
+  //     "🎨 Logo Design",
+  //     "📊 Website Visitor Counter",
+  //     "🛡️ 12 Months Free Support",
+  //   ],
+  //   price: "$199",
+  //   paymentRoute: "/payment/basic",
+  // },
+  // Other plans here...
+
+
+
   {
     id: 1,
     title: "Basic Plan",
@@ -469,14 +470,11 @@ const Card = ({ card }: { card: typeof cards[0] }) => {
     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
       {/* Image Carousel */}
       <div className="w-full mb-4 relative">
-        {/* Carousel Image */}
         <img
           src={card.images[currentImageIndex]}
           alt={`${card.title} Slide`}
           className="rounded-lg w-full h-40 object-cover transition-all duration-500 ease-in-out"
         />
-
-        {/* Navigation Arrows */}
         <button
           onClick={prevImage}
           className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-gray-600 p-2 rounded-full hover:bg-gray-700"
@@ -514,14 +512,12 @@ const Card = ({ card }: { card: typeof cards[0] }) => {
   );
 };
 
-
-
-
-
 export function Home() {
   return (
-    <div className="bg-gray-100 min-h-screen p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Website Plans</h1>
+    <div className="animated-bg min-h-screen p-6 flex flex-col items-center">
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">
+        Website Plans
+      </h1>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
         {cards.map((card) => (
           <Card key={card.id} card={card} />
@@ -531,10 +527,7 @@ export function Home() {
   );
 }
 
+// ✅ Proper Export
 export default Home;
-
-
-
-
 
 

@@ -1,0 +1,123 @@
+/* 🌈 Background Color Zigzag Animation */
+@keyframes bgAnimation {
+    0%, 100% { background-color: #5e0505; } /* 🔴 Red */
+    14%, 28% { background-color: #ff7f00; } /* 🟠 Orange */
+    21%, 55% { background-color: #e3d7d7; } /* 🟡 Yellow */
+    42%, 56% { background-color: #00ff00; } /* 🟢 Green */
+    49%, 63% { background-color: #0000ff; } /* 🔵 Blue */
+    70%, 84% { background-color: #4b0082; } /* 🟣 Indigo */
+    77%, 91% { background-color: #9400d3; } /* 🟪 Violet */
+}
+
+/* Applying the animated background */
+.animated-bg {
+    animation: bgAnimation 5s infinite linear; /* Reduced time for rapid changes */
+}
+
+/* 🎈 Colorful Bubbles Animation */
+@keyframes bubbleAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    animation: bubbleAnimation 5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.bubble1 {
+    background-color: #ff0000; /* 🔴 Red */
+    width: 50px;
+    height: 50px;
+    top: 100%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble2 {
+    background-color: #ff7f00; /* 🟠 Orange */
+    width: 60px;
+    height: 60px;
+    top: 110%;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.bubble3 {
+    background-color: #ffff00; /* 🟡 Yellow */
+    width: 55px;
+    height: 55px;
+    top: 120%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.bubble4 {
+    background-color: #00ff00; /* 🟢 Green */
+    width: 45px;
+    height: 45px;
+    top: 130%;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.bubble5 {
+    background-color: #0000ff; /* 🔵 Blue */
+    width: 60px;
+    height: 60px;
+    top: 140%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+/* 💻 Floating Coding Emojis Animation */
+@keyframes floatEmojis {
+    0% { transform: translateY(0px); opacity: 1; }
+    50% { transform: translateY(-20px); opacity: 0.8; }
+    100% { transform: translateY(0px); opacity: 1; }
+}
+
+.emoji-container {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatEmojis 3s infinite ease-in-out alternate;
+}
+
+/* 🎭 Bouncing Icons Effect */
+@keyframes bounceIcons {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.icon {
+    display: inline-block;
+    animation: bounceIcons 1.5s infinite;
+}
+
+/* 🏆 Button Hover Effect */
+.button {
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #ff6600;
+}
+
+/* 🖼️ Image Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 50; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+img {
+    animation: fadeIn 1s ease-in-out;
+}
