@@ -71,8 +71,8 @@ const VisitorCounter = () => {
 
   return (
     <div className="flex items-center justify-center space-x-2">
-      <Eye className="w-6 h-6 text-blue-600" /> {/* Eye icon */}
-      <span className="text-gray-600 text-lg font-medium">{visitCount}</span> {/* Visitor count */}
+      <Eye className="w-6 h-6 text-red-600" /> {/* Eye icon */}
+      <span className="text-green-600 text-lg font-medium">{visitCount}</span> {/* Visitor count */}
     </div>
   );
 };

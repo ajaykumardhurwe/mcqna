@@ -36,7 +36,7 @@ export function SubjectList() {
               <div className="mt-4 flex justify-between items-center">
                 <button className="flex items-center text-blue-600">
                   <ChevronDown className="w-4 h-4 mr-1" />
-                  Show Details
+                  Learn More
                 </button>
                 <Link
                   to={`/mcq/${subject.id}`}

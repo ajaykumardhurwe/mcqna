@@ -148,7 +148,7 @@ export function TopicList() {
               to={`/mcq/${subject}/${topic.id}`}
               className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800"
             >
-              Start Learning
+              Start Mock Test
               <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>

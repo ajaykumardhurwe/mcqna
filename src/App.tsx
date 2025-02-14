@@ -124,7 +124,7 @@ import Schools from './pages/A2Class/Schools';
 import SchoolsData from './pages/A2Class/SchoolsData';
 import CollegeDetail from './pages/A2Class/CollegeDetail';
 import Notification from './components/layout/Notification';
-
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -175,11 +175,8 @@ function App() {
   <VisitorCounter></VisitorCounter>
 </div>
 
-
-
-<><h1>.</h1></>
-<><h1>.</h1></>
-{/* <><h1>.</h1></> */}
+{/* <><h1>.</h1></>
+<><h1>.</h1></> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -212,6 +209,7 @@ function App() {
         <Route path="/schools" element={<SchoolsData />} />
 
         <Route path="college/:name" element={<CollegeDetail />} />
+        <Route path="*" element={<NotFound />} />
         
 
 
