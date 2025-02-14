@@ -55,29 +55,45 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reloading...</title>
+    <title>404 - Page Not Found</title>
     <script>
-        // Check if the page has already been reloaded during this session
-        if (!localStorage.getItem('hasReloaded')) {
-            // Set a flag indicating the page has been reloaded
-            localStorage.setItem('hasReloaded', 'true');
-            // Reload the page
-            window.location.reload();
+        // Check if the current page is already a valid path
+        if (window.location.pathname === "/" || 
+            window.location.pathname === "/mcq" ||
+            window.location.pathname === "/jobs" ||
+            window.location.pathname === "/a%C2%B2class" ||
+            window.location.pathname === "/profile") {
+            // Do nothing, stay on the same page
+        } else {
+            // If not a valid path, redirect to the homepage or show a 404 page
+            window.location.href = "/404.html"; // Or simply show a message on this page
         }
-          window.location.href = "/";
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <p>Reloading page...</p>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you are looking for does not exist. Please check the URL and try again.</p>
+    <p><a href="/">Go to Home Page</a></p>
 </body>
 </html>
-
 
 
 
