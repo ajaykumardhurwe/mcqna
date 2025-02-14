@@ -35,16 +35,45 @@
     
 <body>
     <p>Reloading the same page...</p>
-<!--       <a href="#jobs"></a>
+     <a href="#jobs"></a>
     <a href="#a²class"></a>
     <a href="#profile"></a>
       <a href="1jobs"></a>
     <a href="/a²class"></a>
-    <a href="/profile"></a> -->
+    <a href="/profile"></a> 
 </body>
 </html>
  -->
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+        
+        // Redirect to the root for React Router
+        window.location.href = "/";
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+ -->
 
 
 
@@ -62,11 +91,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; URL=/" />
     <script>
-        
-        // Redirect to the root for React Router
-        window.location.href = "/";
+        // Get the current path and redirect to the same path
+        var currentPath = window.location.pathname;
+        window.location.replace("/#" + currentPath); 
     </script>
 </head>
 <body>
