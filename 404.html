@@ -63,8 +63,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reloading...</title>
     <script>
-        // Ensure the page reloads and stays on the same URL
-        window.location.reload();
+        // Check if the page has already been reloaded during this session
+        if (!localStorage.getItem('hasReloaded')) {
+            // Set a flag indicating the page has been reloaded
+            localStorage.setItem('hasReloaded', 'true');
+            // Reload the page
+            window.location.reload();
+        }
     </script>
 </head>
 <body>
