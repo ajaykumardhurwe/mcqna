@@ -1,0 +1,244 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path
+        var path = window.location.pathname + window.location.search;
+    
+    
+        window.location.replace("/#" + path); 
+      
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+        // Redirect to the root for React Router
+        window.location.href = "/";
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script>
+        // Check if the current page is already a valid path
+        if (window.location.pathname === "/" || 
+            window.location.pathname === "/mcq" ||
+            window.location.pathname === "/jobs" ||
+            window.location.pathname === "/a%C2%B2class" ||
+            window.location.pathname === "/profile") {
+            // Do nothing, stay on the same page
+        } else {
+            // If not a valid path, redirect to the homepage or show a 404 page
+            window.location.href = "/404.html"; // Or simply show a message on this page
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you are looking for does not exist. Please check the URL and try again.</p>
+    <p><a href="/">Go to Home Page</a></p>
+</body>
+</html>
+
+
+
+    <p>You are staying in the same directory.</p>
+</body>
+</html>
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script>
+        // Check if user is on a valid route
+        const validRoutes = ["/", "/mcq", "/jobs", "/a²class", "/profile"];
+        if (validRoutes.includes(window.location.pathname)) {
+            // Redirect back to index.html for valid routes
+            window.location.href = "/";
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            color: #e74c3c;
+            font-size: 48px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you are looking for does not exist.</p>
+    <p><a href="/">Go to Home Page</a></p>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+        // Redirect to the root for React Router
+        window.location.href = "/";
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay on the Same Page</title>
+    <script>
+        // पेज लोड होने पर URL चेक और रीलोड करें
+        window.onload = function () {
+            // वर्तमान URL प्राप्त करें
+            const currentPath = window.location.pathname;
+
+            // बेस URL (आपके डोमेन का URL)
+            const baseUrl = 'https://ajaydhurwe.tech';
+
+            // सहेजे गए URL को sessionStorage से पढ़ें
+            const savedPath = sessionStorage.getItem('lastPage');
+
+            // अगर savedPath मौजूद है और currentPath से अलग है, तो रीडायरेक्ट करें
+            if (savedPath && savedPath !== currentPath) {
+                window.location.href = baseUrl + savedPath;
+            } else {
+                // वर्तमान पथ को sessionStorage में सहेजें
+                sessionStorage.setItem('lastPage', currentPath);
+            }
+        };
+
+        // पेज बंद होने से पहले वर्तमान पेज सहेजें
+        window.onbeforeunload = function () {
+            sessionStorage.setItem('lastPage', window.location.pathname);
+        };
+    </script>
+</head>
+    
+<body>
+    <p>Reloading the same page...</p>
+</body>
+</html>
+
+
+
