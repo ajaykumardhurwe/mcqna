@@ -1,7 +1,7 @@
 
 import React,{useEffect} from 'react';
 import ReactGA from "react-ga4";
-import { Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import { BottomNav } from './components/layout/BottomNav';
 import { Home } from './pages/Home';
 import { MCQ } from './pages/MCQ';
@@ -49,7 +49,7 @@ useEffect(() => {
 
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="min-h-screen bg-gray-50 pb-16">
  {/* <VisitorCounter></VisitorCounter> 
        <Notification></Notification> */}
@@ -140,7 +140,7 @@ useEffect(() => {
         </Routes>
         <BottomNav />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
