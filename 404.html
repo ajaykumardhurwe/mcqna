@@ -201,7 +201,7 @@
 
 
 
-<!-- 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -253,7 +253,6 @@
 
 
 
- -->
 
 
 
@@ -267,56 +266,3 @@
 
 
 
-
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stay on the Same Page</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const baseUrl = "https://ajaydhurwe.tech";
-            let currentPath = window.location.pathname;
-
-            // यदि कोई savedPath है, तो URL को अपडेट करें
-            const savedPath = sessionStorage.getItem("lastPage");
-
-            if (savedPath && savedPath !== currentPath) {
-                history.replaceState(null, "", baseUrl + savedPath);
-            }
-
-            // पेज बदलने पर sessionStorage अपडेट करें
-            window.addEventListener("beforeunload", function () {
-                sessionStorage.setItem("lastPage", window.location.pathname);
-            });
-
-            // सभी नेविगेशन लिंक पर क्लिक को हैंडल करें
-            document.querySelectorAll("a").forEach(anchor => {
-                anchor.addEventListener("click", function (event) {
-                    event.preventDefault(); // डिफॉल्ट लोडिंग को रोकें
-                    const newPath = this.getAttribute("href");
-                    
-                    if (newPath.startsWith("/")) {
-                        history.pushState(null, "", baseUrl + newPath);
-                        sessionStorage.setItem("lastPage", newPath);
-                    } else {
-                        window.location.href = newPath;
-                    }
-                });
-            });
-        });
-    </script>
-</head>
-
-<body>
-    <p>Reloading the same page...</p>
-
-    <nav>
-        <a href="/mcq">MCQ</a>
-        <a href="/jobs">Jobs</a>
-        <a href="/src/pages/Jobs/index.tsx">Jobs Page</a>
-        <a href="/profile">Profile</a>
-    </nav>
-</body>
-</html>
